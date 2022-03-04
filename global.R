@@ -2,7 +2,7 @@ library(tidyverse)
 
 source("category_meaning_fr.R")
 
-raw_resources <- read.csv("Book1.csv",header=T,sep=";")
+raw_resources <- read.csv("resources.csv",header=T,sep=";")
 
 process_items_from_column<-function(column_content, category_meaning) {
   
