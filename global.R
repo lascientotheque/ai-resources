@@ -1,4 +1,5 @@
 library(tidyverse)
+library(jsonlite)
 
 raw_resources <- read.csv("resources.csv",header=T,sep=";")
 
@@ -70,6 +71,15 @@ get_content_column<-function(raw_resources, language, i18n) {
   return(html_code)
 }
 
+get_description_column<-function(descriptions) {
+  
+  html_code<-c()
+  for (i in 1:length(descriptions)) {
+    html_code<-c(html_code,
+                 paste0(descriptions[i]))
+  }
+  return(html_code)
+}
 
 
 # Get processed items for columns that need to be processed (language, keywords, resource type, etc...)

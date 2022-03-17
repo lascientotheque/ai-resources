@@ -49,7 +49,7 @@
               "14-18",
               ">18"],
         "fr":
-        ["Tous les ages", 
+        ["Tous les âges", 
         "<6",
               "6-10",
               "10-14",
@@ -115,7 +115,7 @@
                     "Advertenties",
                     "Persoonsgegevens"] 
     },
-    "connectivty": {
+    "connectivity": {
        "en":
         ["Unplugged/Connected",
                       "Unplugged",

@@ -104,10 +104,10 @@ server <- function(input, output, session) {
     
     # Get HTML code for content column
     content_column<- get_content_column(raw_resources, language, i18n)
-    #content_column<- get_content_column(raw_resources, "en")
     
     # Get HTML code for description column
-    description_column<-get_description_column(raw_resources$Description)
+    localised_name<-paste0("Description_",language)
+    description_column<-get_description_column(raw_resources[[localised_name]])
     
     full_resources_table <- data.frame(image=image_column, 
                                   content=content_column, 

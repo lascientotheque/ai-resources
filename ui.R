@@ -36,9 +36,15 @@ ui <- fluidPage(
       i18n$t("Home"),
       tags$div(style = "margin-bottom:50px;",),
       column(12, align="justify",
-         uiOutput("about_page")
+         uiOutput("about_page"),
+         img(src='./img/site/footer_sciento.jpg'),
+         img(src='./img/site/footer_bemaker.jpg'),
+         img(src='./img/site/footer_fari.jpg'),
+         img(src='./img/site/footer_ehs.jpg'),
+         img(src='./img/site/footer_dbsf.jpg'),
+         img(src='./img/site/footer_bosa.jpg'),
       ),
-      includeHTML("content/footer.html")
+      
     ),
     tabPanel(i18n$t("Search resources"),
              fluidPage(
@@ -56,8 +62,7 @@ ui <- fluidPage(
       tags$div(style = "margin-bottom:50px;",),
       column(12, align="justify",
              uiOutput("contribute_page")
-      ),
+      )
     )
-  ),
-  
+  )
 )
