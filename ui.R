@@ -3,62 +3,61 @@ library(shinydashboard)
 library(DT)
 library(shinythemes)
 library(markdown)
+library(shiny.i18n)
+
+i18n <- Translator$new(translation_csvs_path = "translation/")
 
 ui <- fluidPage(
+  shiny.i18n::usei18n(i18n),
+  div(
+    style = "float: right;",
+    selectInput(
+      'selected_language',
+      i18n$t(""),
+      choices = i18n$get_languages(),
+      selected = i18n$get_key_translation()
+    )
+  ),
+  tags$head(tags$link(rel = "shortcut icon", href = "Robot.ico")),
   theme = shinytheme("cosmo"),
-  windowTitle = "IA resources",
-  titlePanel(withTags(
-    div("Catalogue de ressources pédagogiques sur l'intelligence artificielle",
-        div(class = 'pull-right',
-            a(href = 'https://github.com/lascientotheque/ia-resources',
-              icon('github'))), hr()),
-  ), 
+  windowTitle = "AI catalog",
+  titlePanel(
+    tags$div(
+      i18n$t("Artificial intelligence resource directory"),
+      hr(),
+      tags$head(
+        tags$link(rel = "icon", href = "robot.ico"),
+        tags$title("IA resources")
+      )
+    )
   ),
   tabsetPanel(
-    tabPanel("Accueil",
-             tags$div(
-               style="margin-bottom:50px;",
-             ),
-             includeMarkdown("content/About.md")
+    tabPanel(
+      i18n$t("Home"),
+      tags$div(style = "margin-bottom:50px;",),
+      column(12, align="justify",
+         uiOutput("about_page")
+      ),
+      includeHTML("content/footer.html")
     ),
-    tabPanel("Recherche de ressources",
+    tabPanel(i18n$t("Search resources"),
              fluidPage(
                fluidRow(
-                 tags$div(
-                   style="margin-bottom:50px;",
-                 ),
-                 column(6,
-                        selectInput("language", "Langue", 
-                                    all_languages),
-                        selectInput("resource_type", "Type de ressource", 
-                                    all_resource_types),
-                        selectInput("age", "Age", all_ages),
-                 ),
-                 column(6,
-                        selectInput("category", "Catégorie", 
-                                    all_categories),
-                        selectInput("connectivity", "Connectivité", 
-                                    all_connectivity),
-                        selectInput("data_type", "Type de données", 
-                                    all_data_types),
-                        selectInput("other_keywords", "Autres mots-clefs", 
-                                    all_other_keywords),
-                 )
+                 tags$div(style = "margin-bottom:50px;",),
+                 uiOutput("filter_column_1"),
+                 uiOutput("filter_column_2"),
+                 uiOutput("filter_column_3"),
                ),
-               fluidRow(
-                 h3("Ressources"),
-                 DT::DTOutput("resources")
-               )
-             ),
-    ),
-    tabPanel("Contribuer",
-             tags$div(
-               style="margin-bottom:50px;",
-             ),
-             includeMarkdown("content/Contribute.md")
+               fluidRow(h3(i18n$t("Resources")),
+                        DT::DTOutput("resources"))
+             ),),
+    tabPanel(
+      i18n$t("Contribute"),
+      tags$div(style = "margin-bottom:50px;",),
+      column(12, align="justify",
+             uiOutput("contribute_page")
+      ),
     )
-  )
+  ),
+  
 )
-
-
-

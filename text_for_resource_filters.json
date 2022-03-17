@@ -1,0 +1,146 @@
+{
+    
+    "languages": {
+        "en":
+        ["All languages", 
+        "FR", 
+        "NL", 
+        "EN", 
+        "Other"],
+        "fr":
+        ["Toutes les langues", 
+        "FR", 
+        "NL", 
+        "EN", 
+        "Autre"],
+        "nl":
+        ["Alle talen", 
+        "FR", 
+        "NL", 
+        "EN", 
+        "Andere"]
+    },
+    "resource_types": {
+        "en":
+        ["All types of resources", 
+        "Course", 
+        "Educational sheets/Tutorials", 
+        "Interactive tools", 
+        "Clubs/Workshops"],
+        "fr":
+        ["Tous les types de ressources", 
+        "Cours", 
+        "Fiches pédagogiques/Tutoriels", 
+        "Outils interactifs", 
+        "Clubs/Ateliers"],
+        "nl":
+         ["Alle soorten middelen", 
+        "Cursus", 
+        "Educatieve fiches/lesmateriaal", 
+        "Interactieve hulpmiddelen", 
+        "Clubs/Workshops"]
+    },
+    "ages": {
+        "en":
+        ["All ages", 
+        "<6",
+              "6-10",
+              "10-14",
+              "14-18",
+              ">18"],
+        "fr":
+        ["Tous les ages", 
+        "<6",
+              "6-10",
+              "10-14",
+              "14-18",
+              ">18"],
+        "nl":
+        ["Alle leeftijden", 
+        "<6",
+              "6-10",
+              "10-14",
+              "14-18",
+              ">18"]
+    },
+    "categories": {
+    	"en":
+    	["All categories", 
+    	"General culture", 
+    	"Algorithm", 
+    	"Learning", 
+    	"Programming", 
+    	"IoT-Robotics", 
+    	"Ethics"],
+    	"fr":
+    	["Toutes les catégories", 
+    	"Culture générale", 
+    	"Algorithme", 
+    	"Apprentissage", 
+    	"Programmation", 
+    	"IoT-Robotique", 
+    	"Ethique"],
+        "nl":
+        ["Alle categorieën", 
+        "Algemene cultuur", 
+        "Algoritme", 
+        "Leren", 
+        "Programmeren", 
+        "IoT-Robotica", 
+        "Ethiek"]
+    },
+    "data_types": {
+       "en":
+        ["All data types",
+                    "Image",
+                    "Text",
+                    "Sound",
+                    "Social networks",
+                    "Advertisements",
+                    "Personal data"],
+        "fr":
+        ["Tous les types de données",
+                    "Image",
+                    "Texte",
+                    "Son",
+                    "Réseaux sociaux",
+                    "Publicités",
+                    "Données personnelles"],
+        "nl":
+        ["Alle datatypes",
+                    "Afbeelding",
+                    "Tekst",
+                    "Geluid",
+                    "Sociale netwerken",
+                    "Advertenties",
+                    "Persoonsgegevens"] 
+    },
+    "connectivty": {
+       "en":
+        ["Unplugged/Connected",
+                      "Unplugged",
+                      "Connected"],
+        "fr":
+        ["Débranché/Connecté",
+                      "Débranché",
+                      "Connecté"],
+        "nl":
+        ["Unplugged/Connected",
+                      "Unplugged",
+                      "Connected"] 
+    },
+    "other_keywords": {
+       "en":
+        ["All other keywords",
+                        "Magic",
+                        "Games"],
+        "fr":
+        ["Tous les autres mots-clefs",
+                        "Magie",
+                        "Jeux"],
+        "nl":
+        ["Alle andere trefwoorden",
+                        "Magie",
+                        "Spelletjes"] 
+    }
+  }
