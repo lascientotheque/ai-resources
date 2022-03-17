@@ -115,29 +115,6 @@ server <- function(input, output, session) {
     full_resources_table
   })
   
-   # Display table
-  
-  output$resources <- DT::renderDataTable(
-    DT::datatable({
-      data <- resources_table()
-    },
-    escape = FALSE,
-    rownames = FALSE,
-    colnames = c("", "", ""),
-    options = list(
-      dom = 'ltp',
-      bSort = FALSE,
-      columnDefs = list(
-        list(width = '100px', targets = c(0)),
-        list(width = '400px', targets = c(1))
-      ),
-      scrollX = TRUE,
-      lengthMenu = list(c(10, -1), c('10', 'All')),
-      pageLength = 10
-    ),
-    selection = 'single')
-  )
-  
   # Functions for selecting resources based on filters
   
   filter_resources_from_field <-
@@ -238,4 +215,28 @@ server <- function(input, output, session) {
   resources_table <- reactive({
     filter_resources(full_resources_table())
   })
+  
+  # Display table
+  
+  output$resources <- DT::renderDataTable(
+    DT::datatable({
+      data <- resources_table()
+    },
+    escape = FALSE,
+    rownames = FALSE,
+    colnames = c("", "", ""),
+    options = list(
+      dom = 'ltp',
+      bSort = FALSE,
+      columnDefs = list(
+        list(width = '100px', targets = c(0)),
+        list(width = '400px', targets = c(1))
+      ),
+      scrollX = TRUE,
+      lengthMenu = list(c(10, -1), c('10', 'All')),
+      pageLength = 10
+    ),
+    selection = 'single')
+  )
+
 }
