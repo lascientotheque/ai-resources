@@ -1,7 +1,7 @@
 
 
 
-Website at: [https://lascientotheque.shinyapps.io/ia-resources/](https://lascientotheque.shinyapps.io/ia-resources/).
+Website at: [https://lascientotheque.shinyapps.io/ai-resources/](https://lascientotheque.shinyapps.io/ai-resources/).
 
 
 The site aims to bring together relevant educational resources to address, understand and discuss the technologies known as **artificial intelligence** (AI). The target audience is teachers or facilitators for young audiences (4 to 18 years old). 
